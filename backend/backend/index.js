@@ -49,7 +49,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
 });
 
 //schema for creating products
-const productSchema =  new mongoose.Schema({
+const Product = mongoose.model("product", {
   id: {
     type: Number,
     required: true,
@@ -83,8 +83,6 @@ const productSchema =  new mongoose.Schema({
     default: true,
   },
 });
-
-const Product = mongoose.model('Product', productSchema);
 
 app.post("/addproduct", async (req, res) => {
   let products = await Product.find({});
@@ -324,7 +322,7 @@ app.post("/orders", async (req, res) => {
 
   try {
     // Find user
-    const user = await Users.findById(userId);
+    const user = await User.findById(userId);
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
@@ -379,7 +377,6 @@ app.get('/orders', async (req, res) => {
 
       res.status(200).json(orders);
   } catch (error) {
-      console.log(error)
       res.status(500).json({ message: 'Error retrieving orders', error });
   }
 });
