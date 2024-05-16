@@ -1,0 +1,154 @@
+.container-About {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 120px;
+    background: linear-gradient(to right, #FFDCAB, #e1ffea22);
+}
+
+.title-About {
+    font-weight: 600;
+    text-align: center;
+    font-size: 45px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.content-About {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.image-container-About {
+    width: 100%;
+    max-width: 50%;
+}
+
+.image-About {
+    border-radius: 20px;
+}
+
+.text-container-About {
+    width: 100%;
+    max-width: 50%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subtitle-About {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.paragraph-About {
+    font-size: 20px;
+}
+
+@media (max-width:1280px) {
+    .title-About {
+        font-size: 35px;
+        margin-top: 20px;
+        margin-bottom: 6px;
+    }
+
+    .image-container-About img {
+        width: 450px;
+    }
+
+    .subtitle-About {
+        font-size: 27px;
+        margin-left: 10px;
+        margin-bottom: 17px;
+    }
+
+    .paragraph-About {
+        font-size: 15PX;
+        font-weight: 300;
+    }
+
+    .content-About {
+        gap: 90px;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .title-About {
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 6px;
+    }
+
+    .image-container-About img {
+        width: 350px;
+    }
+
+    .subtitle-About {
+        font-size: 20px;
+
+    }
+
+    .paragraph-About {
+        font-size: 15PX;
+        font-weight: 300;
+    }
+
+    .content-About {
+        gap: 90px;
+    }
+
+    .paragraph-About.none {
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+    .container-About {
+        padding: 10px 10px;
+        ;
+    }
+
+    .title-About {
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 6px;
+    }
+
+    .image-container-About img {
+        width: 300px;
+    }
+
+    .subtitle-About {
+        font-size: 17px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+
+    .paragraph-About {
+        font-size: 13px;
+        font-weight: 400;
+        margin-left: 25px;
+    }
+
+    .content-About {
+        gap: 30px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .content-About {
+        display: grid;
+        grid-auto-rows: auto;
+        padding-left: 50px;
+    }
+
+    .image-container-About img {
+        width: 250px;
+    }
+};
